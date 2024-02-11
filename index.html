@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iqra's Portfolio</title>
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        /* font-family: 'Baloo Bhai', cursive;*/
+    }
+html{
+    scroll-behavior: smooth;
+}
+    body {
+        background-color: black;
+        color: white;
+    }
+
+    .left {
+        font-size: 1.6rem;
+        color: rgb(210, 110, 126);
+
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgb(33, 32, 32);
+        height: 75px;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        list-style: none;
+        margin: 0 23px;
+    }
+
+    .firstsection {
+        display: flex;
+        justify-content: space-around;
+        margin: 80px 0px;
+        align-items: center;
+    }
+
+    .leftsection {
+        font-size: 3rem;
+        margin: 70px 0px;
+
+    }
+
+    .firstsection>div {
+        width: 30%;
+    }
+
+    .rightsection img {
+        width: 80%;
+        margin: 80px 0px;
+    }
+
+    .pink {
+        color: rgb(210, 110, 126);
+    }
+
+    ul li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    ul li a:hover {
+        color: rgb(134, 143, 151);
+        text-decoration: underline;
+        font-size: 1.04rem;
+    }
+
+    #element {
+        color: rgb(210, 110, 126);
+    }
+
+    .secondsection {
+        max-width: 80vw;
+        margin: auto;
+        height: 80vh;
+    }
+
+    main hr {
+        border: 0px;
+        margin: 60px 84px;
+        background-color: rgb(210, 110, 126);
+        height: 1.2px;
+    }
+
+    .about {
+        display: flex;
+        justify-content: center;
+        margin: 80px 0px;
+        align-items: center;
+    }
+
+    .row h1 {
+        font-size: 1.9rem;
+        margin: 70px 0;
+
+        font-size: 50px;
+        font-weight: 400;
+    }
+
+    .row p {
+        margin: 70px 0;
+        height: 0px 2px;
+        font-size: 20px;
+    }
+
+    .about>div {
+        width: 70%;
+    }
+
+    .tab {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 0 40px;
+    }
+
+    .tab-links {
+        margin-right: 50px;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        position: relative;
+    }
+    .tab-links::after {
+        content: '';
+        width: 0;
+        height: 3px;
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        background: rgb(210, 110, 126);
+        transition: 0.5s;
+    }
+
+    .tab-links.active-link::after {
+        width: 50%;
+    }
+
+    .tab-contents ul li {
+        list-style: none;
+        margin: 10px 0;
+    }
+
+    .tab-contents ul li span {
+        color: rgb(210, 110, 126);
+        font-size: 14px;
+    }
+
+    .tab-contents {
+        display: none;
+    }
+
+    .tab-contents.active-tab {
+        display: block;
+    }
+
+    #services {
+        padding: 30px 0;
+    }
+
+    .services-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 40px;
+        margin-top: 50px;
+        border: 20px;
+        border-radius: 20px;
+        border-color: rgb(210, 110, 126);
+        padding: 22px;
+    }
+
+    #services h1 {
+        text-align: center;
+        font-size: 1.9rem;
+        margin: 70px 0;
+        font-size: 50px;
+        font-weight: 40;
+
+    }
+
+    .services-list div {
+        background-color: rgb(28, 27, 27);
+        font-size: 13px;
+        padding: 40px;
+        border-radius: 10px;
+        font-weight: 300;
+
+    }
+
+    .services-list div h2 {
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+   .services-list div p{
+    font-size: medium;
+    font-style:normal;
+   }
+
+    .services-list div a {
+        text-decoration: none;
+        font-size: 12px;
+        color: white;
+        margin-top: 20px;
+        display: inline-block;
+    }
+
+    .services-list div:hover {
+        background-color: rgb(172, 83, 98);
+        transform: translateY(-10px);
+    }
+
+    #project h1 {
+        text-align: center;
+        font-size: 1.9rem;
+        margin: 70px 0;
+        font-size: 50px;
+        font-weight: 40;
+    }
+
+    #project {
+        padding: 50px 0;
+    }
+
+    .work-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 40px;
+        margin-top: 50px;
+        border: 20px;
+        border-radius: 20px;
+        border-color: rgb(210, 110, 126);
+        padding: 22px;
+    }
+
+    .work {
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+
+
+    .work img {
+        border-radius: 10px;
+        width: 100%;
+        display: block;
+    }
+
+    /*--------------------------contact------------------------------*/
+    .contact {
+        width: 100%;
+    }
+
+    .contact-left {
+        flex-basis: 35%;
+        padding-left: 550px;
+    }
+
+    .contact-right {
+        flex-basis: 60%;
+    }
+    
+    .contact-left p {
+        margin-top: 30px;
+    }
+
+    .social-icons {
+        margin: 30px;
+    }
+
+    .social-icons a img {
+        text-decoration: none;
+        margin-right: 15px;
+        display: inline-block;
+        transition: transform 0.5s;
+    }
+
+    .social-icons a img:hover {
+        color: rgb(242, 214, 218);
+        transform: translateY(-5px);
+    }
+
+    .btn{
+        display: inline-block;
+        background-color: rgb(147, 67, 81);
+        border-radius: 10px;
+        margin: 22px;
+        padding: 8px;
+        color: white;
+        font-size: 22px;
+        width: 130px;
+        text-decoration: none;
+    }
+    /* Add this inside the existing media query */
+
+@media screen and (max-width: 768px) {
+    /* Existing styles for smaller screens */
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        display: none; /* Hide regular navigation */
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+        cursor: pointer;
+        color: white;
+        font-size: 1.5rem;
+        margin-right: 15px;
+    }
+
+    .firstsection {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .leftsection {
+        margin: 20px 0;
+        font-size: 2rem;
+    }
+
+    .rightsection img {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .tab {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tab-links {
+        margin: 10px 0;
+    }
+
+    .tab-contents ul li {
+        margin: 5px 0;
+    }
+
+    .about>div {
+        width: 100%;
+    }
+
+    .contact-left {
+        padding-left: 0;
+    }
+
+    .services-list,
+    .work-list {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+}
+
+
+
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Iqra's Portfolio</div>
+            <div class="right"></div>
+            <ul>
+                
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#project">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                Hi, My name is <span class="pink">Iqra</span>
+                <div>And I'm a Passionate </div>
+                <span id="element"></span>
+            </div>
+            <div class="rightsection">
+                <img src="image/learning.png" alt="">
+            </div>
+        </section>
+    
+                <hr>
+        <div id="about">
+        <section class="about">
+            <div class="row">
+                <h1>About Me</h1>
+                <p>Hello My name is Iqra Iqbal . I am a Software Developer. I made different efficient projects using C
+                    and C plus plus programming language. Currently I start to work on Python development.
+                    I also work on web development and made a dynamic website. I am interested in frontend development.
+                    I have a great project building and time management skills. I enjoy to work as a team leader or
+                    group member.
+                    A passionate, goal-driven individual eager to learn new things and explore new opportunities.</p>
+                <div class="tab">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <!--Skills-->
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Software Developer</span><br>Python<br>C<br>C++<br>OOP</li>
+                        <li><span>Web Developer</span><br>Frontend Developer</li>
+
+                    </ul>
+                </div>
+                <!--Experience-->
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2-years</span>
+                        <br>Teacher (Physics and Maths)</li>
+                        <li><span>1-month</span><br>Internship at Internsavy</li>
+                       
+                    </ul>
+                </div>
+                <!--Education-->
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2020-2022</span><br>Pre-Engineering from P.E.C.H.S</li>
+                        <li><span>2022-2026</span><br>CS(AI) from NEDUET</li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- Load library from the CDN -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Software Developer'],
+            typeSpeed: 50,
+        });
+    </script>
+    </div>
+    <!--------------services--------------->
+    <div id="services">
+        <div class="container">
+            <h1>Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Software Development <span><img src="image/coding.png" width="10%" height="15%"></span></h2>
+                    <p>Choosing the right software development services for your project or idea is like choosing a crew to go sailing.Here you meet your demanding and efficient software for your buissness.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <h2>Time Management<span><img src="image/idea.png" width="10%" height="15%"></span></h2>
+                    <p>Managing time effectively is an important professional skill to develop. Organizing tasks each day helps to complete work on time, prioritize projects and communicate progress to supervisors and colleagues.I Have a strong time-management skills which ultimately leads to accomplishing my key goals and advancing my career.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <h2>Web Development<span><img src="image/brush.png" width="10%" height="15%"></span></h2>
+
+                    <p>The web development field is always evolving.I provide dynamic,efficient,and responsive websites using Html5,Css3 and Javascript which meets your buisness ideas.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------------------------portfolio/project------------------------------->
+    <div id="project">
+        <div class="container">
+            <h1 class="subtitle">My Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="image/project1.JPG">
+                </div>
+                <div class="work">
+                    <img src="image/pic 2.JPG">
+                </div>
+                <div class="work">
+                    <img src="image/ic 3.JPG">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------------Contact----------------------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p>iqraiqbal005it@gmail.com</p>
+                    <p>+923108298122</p>
+                    <div class="social-icons">
+                        <a href="https://"><img src="image/icons8-whatsapp-50.png" width="2%" height="2%"></a>
+                        <a href="#"><img src="image/icons8-facebook-50.png" width="2%" height="2%"></a>
+                        <a href="https://www.linkedin.com/mwlite/in/iqra-iqbal-a2234b271"><img
+                                src="image/icons8-linkedin-64.png" width="2%" height="2%"></a>
+                        <a href="#"><img src="image/icons8-insta-50.png" width="2%" height="2%"></a>
+                    </div>
+                    <a href="image/CV_.pdf" download class="btn btn2">Download CV</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script defer>
+        document.addEventListener("DOMContentLoaded", function () {
+            var menuBtn = document.querySelector(".menu-btn");
+            var navLinks = document.querySelector("nav ul");
+    
+            // Check if the elements are found in the DOM
+            if (menuBtn && navLinks) {
+                menuBtn.addEventListener("click", function () {
+                    navLinks.classList.toggle("show");
+                });
+            }
+        });
+    </script>
+    
+    
+    
+</body>
+
+</html>
